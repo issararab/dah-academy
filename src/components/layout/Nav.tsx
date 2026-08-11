@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../../assets/logo/logo.png";
+import logo from "../../assets/logo/logo-mark.png?w=100&format=webp";
 import { NAV_LINKS } from "../../content/nav";
 import { ACADEMY_URL } from "../../content/site";
 import { MobileMenu } from "./MobileMenu";
