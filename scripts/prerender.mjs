@@ -12,7 +12,7 @@ const appHtml = render();
 
 if (!appHtml || appHtml.length < 100) {
   throw new Error(
-    `Prerender produced suspiciously little output (${appHtml?.length ?? 0} chars) — aborting instead of shipping a broken build.`
+    `Prerender produced suspiciously little output (${appHtml?.length ?? 0} chars). Aborting instead of shipping a broken build.`
   );
 }
 
@@ -21,14 +21,14 @@ const marker = '<div id="root"></div>';
 
 if (!original.includes(marker)) {
   throw new Error(
-    `Could not find '${marker}' in dist/index.html — aborting instead of shipping a broken build.`
+    `Could not find '${marker}' in dist/index.html. Aborting instead of shipping a broken build.`
   );
 }
 
 const html = original.replace(marker, `<div id="root">${appHtml}</div>`);
 
 if (html === original) {
-  throw new Error("Prerender replace was a no-op — aborting instead of shipping a broken build.");
+  throw new Error("Prerender replace was a no-op. Aborting instead of shipping a broken build.");
 }
 
 writeFileSync(distIndexPath, html);

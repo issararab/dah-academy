@@ -42,7 +42,7 @@ export function Hero() {
           </h1>
           <p className="text-[rgba(200,215,255,.7)] text-[1.05rem] max-w-lg leading-[1.72] font-light">
             We bridge the gap between theory and execution through applied,
-            business-driven education — for professionals ready to drive real
+            business-driven education, for professionals ready to drive real
             results with data and AI.
           </p>
           <div className="flex gap-4 flex-wrap">

@@ -16,7 +16,7 @@ export function Footer() {
           <span className="font-heading font-bold text-sm text-cyan">DAH Academy</span>
         </div>
         <p className="text-[rgba(200,215,255,.4)] text-sm">
-          © 2026 DAH Academy — Data &amp; AI Excellence Hub. All rights reserved.
+          © 2026 DAH Academy: Data &amp; AI Excellence Hub. All rights reserved.
         </p>
         <div className="flex gap-6 justify-center">
           {LINKS.map((l) => (

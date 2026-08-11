@@ -1,3 +1,4 @@
+import aiReadinessCover from "../../assets/misc/ai-readiness-cover.jpg?w=600&format=webp";
 import { FadeIn } from "../ui/FadeIn";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -5,12 +6,12 @@ const POINTS = [
   {
     n: "01",
     title: "We build data confidence",
-    desc: "Not just tool knowledge — real decision power and the ability to lead with data.",
+    desc: "Not just tool knowledge: real decision power and the ability to lead with data.",
   },
   {
     n: "02",
     title: "Strategic, not hype-driven",
-    desc: "Our content cuts through the noise. No buzzwords — just what works in practice.",
+    desc: "Our content cuts through the noise. No buzzwords: just what works in practice.",
   },
   {
     n: "03",
@@ -57,12 +58,19 @@ export function WhyDah() {
         </div>
         <FadeIn delay={0.2}>
           <div className="bg-white/[.025] border border-cyan/[.14] rounded-[18px] p-10 text-center">
-            <div className="w-[100px] h-[100px] rounded-full bg-gradient-to-br from-blue/30 to-cyan/15 border-2 border-cyan/25 mx-auto mb-6 flex items-center justify-center text-[2.5rem] animate-float-avatar">
-              📊
+            <div className="w-full max-w-[280px] aspect-video rounded-2xl overflow-hidden border-2 border-cyan/25 mx-auto mb-6 shadow-[0_0_32px_rgba(0,212,255,.18)] animate-float-avatar">
+              <img
+                src={aiReadinessCover}
+                alt="AI readiness illustration"
+                width={600}
+                height={319}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="font-heading font-bold text-[1.15rem] mb-3 leading-snug text-cyan">
-              "We don't just teach tools —<br />
-              we build AI readiness."
+              "We don't just teach tools.<br />
+              We build AI readiness."
             </div>
             <div className="flex justify-center gap-4 mt-7 flex-wrap">
               {TAGS.map((t) => (

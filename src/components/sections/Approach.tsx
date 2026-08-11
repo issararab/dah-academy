@@ -6,7 +6,7 @@ const ITEMS = [
   {
     icon: "🔨",
     title: "Applied Learning",
-    desc: "Project-based courses that mirror real-world challenges — not toy examples.",
+    desc: "Project-based courses that mirror real-world challenges, not toy examples.",
   },
   {
     icon: "🎯",
@@ -21,7 +21,7 @@ const ITEMS = [
   {
     icon: "💼",
     title: "Business-First",
-    desc: "Learn how AI and data choices impact cost, risk, and ROI — not just accuracy.",
+    desc: "Learn how AI and data choices impact cost, risk, and ROI, not just accuracy.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function Approach() {
       <SectionHeading
         eyebrow="Our Approach"
         title="Built for the Real World"
-        intro="Every method is designed to move you from learning to doing — fast."
+        intro="Every method is designed to move you from learning to doing, fast."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {ITEMS.map((c, i) => (

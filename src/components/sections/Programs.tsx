@@ -6,7 +6,7 @@ const ITEMS = [
   {
     icon: "🎓",
     title: "Online Courses",
-    desc: "Beginner to advanced and leadership tracks — learn at your own pace with real projects.",
+    desc: "Beginner to advanced and leadership tracks: learn at your own pace with real projects.",
   },
   {
     icon: "⚡",

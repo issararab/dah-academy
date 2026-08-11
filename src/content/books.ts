@@ -28,7 +28,7 @@ export const BOOKS: Book[] = [
     price: 29.99,
     currency: "USD",
     description:
-      "A structured, evidence-based comparison of twelve leading BI platforms across ten evaluation dimensions — usability, integration, governance, cost, and total cost of ownership.",
+      "A structured, evidence-based comparison of twelve leading BI platforms across ten evaluation dimensions: usability, integration, governance, cost, and total cost of ownership.",
     coverWebp: biPlatformsCoverWebp,
     coverJpg: biPlatformsCoverJpg,
     buyUrl: "https://payhip.com/b/XJAvP",
@@ -51,7 +51,7 @@ export const BOOKS: Book[] = [
     price: 49.99,
     currency: "USD",
     description:
-      "A technical guide to moving AI prototypes into production — retrieval-augmented generation, agent orchestration, governance, and deployment with MLflow.",
+      "A technical guide to moving AI prototypes into production: retrieval-augmented generation, agent orchestration, governance, and deployment with MLflow.",
     coverWebp: aiAgentsCoverWebp,
     coverJpg: aiAgentsCoverJpg,
     buyUrl: "https://payhip.com/b/WyVOt",
@@ -63,7 +63,7 @@ export const BOOKS: Book[] = [
     price: 29.99,
     currency: "USD",
     description:
-      "An executive-level framework for evaluating cloud data platforms — Databricks, Snowflake, Microsoft Fabric, and AWS — for architectural fit, AI readiness, and long-term TCO.",
+      "An executive-level framework for evaluating cloud data platforms: Databricks, Snowflake, Microsoft Fabric, and AWS, for architectural fit, AI readiness, and long-term TCO.",
     coverWebp: dataStrategyCoverWebp,
     coverJpg: dataStrategyCoverJpg,
     buyUrl: "https://payhip.com/b/sEqI6",

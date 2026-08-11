@@ -14,7 +14,7 @@ export function NewsletterCTA() {
         </h2>
         <p className="text-[rgba(240,244,255,.7)] mb-10 text-[1.05rem] max-w-xl mx-auto leading-relaxed">
           Join the DAH Academy community and start turning your data skills
-          into business results — starting today.
+          into business results, starting today.
         </p>
         <div className="relative flex justify-center gap-4 flex-wrap">
           <button

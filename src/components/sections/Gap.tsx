@@ -15,7 +15,7 @@ const DAH = [
   "Python, SQL, dbt, Power BI, LLMs",
   "Real projects with real business context",
   "Every skill tied to cost, risk & ROI",
-  "AI-native curriculum — updated continuously",
+  "AI-native curriculum, updated continuously",
   "Career-ready in weeks, not years",
   "Data storytelling & communication",
 ];
@@ -61,7 +61,7 @@ export function Gap() {
           </div>
         </div>
         <div className="mt-7 text-center text-[rgba(200,215,255,.55)] text-[.95rem]">
-          Start your modern data &amp; AI career —{" "}
+          Start your modern data &amp; AI career,{" "}
           <button
             onClick={() => window.open(ACADEMY_URL, "_blank", "noopener,noreferrer")}
             className="bg-transparent border-none cursor-pointer text-cyan font-semibold text-[.95rem] p-0"
