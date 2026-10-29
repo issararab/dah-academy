@@ -1,14 +1,14 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { NAV_LINKS } from "../../content/nav";
 import { ACADEMY_URL } from "../../content/site";
+import { externalLinkProps, goToSection } from "./navigation";
 
 interface MobileMenuProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  onNavigate: (href: string) => void;
 }
 
-export function MobileMenu({ open, onOpenChange, onNavigate }: MobileMenuProps) {
+export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>
@@ -26,16 +26,18 @@ export function MobileMenu({ open, onOpenChange, onNavigate }: MobileMenuProps) 
             Menu
           </Dialog.Title>
           {NAV_LINKS.map((l) => (
-            <button
+            <a
               key={l.label}
-              onClick={() => {
+              href={l.href}
+              {...externalLinkProps(l.external)}
+              onClick={(e) => {
                 onOpenChange(false);
-                onNavigate(l.href);
+                if (!l.external) goToSection(e, l.href);
               }}
-              className="bg-transparent border-none cursor-pointer text-[rgba(232,238,255,.8)] text-base text-left"
+              className="text-[rgba(232,238,255,.8)] text-base text-left"
             >
               {l.label}
-            </button>
+            </a>
           ))}
           <button
             onClick={() => {
