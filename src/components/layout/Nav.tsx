@@ -3,14 +3,7 @@ import logo from "../../assets/logo/logo-mark.png?w=100&format=webp";
 import { NAV_LINKS } from "../../content/nav";
 import { ACADEMY_URL } from "../../content/site";
 import { MobileMenu } from "./MobileMenu";
-
-function handleNav(href: string) {
-  if (href.startsWith("#")) {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-  } else {
-    window.open(href, "_blank", "noopener,noreferrer");
-  }
-}
+import { externalLinkProps, goToSection } from "./navigation";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,13 +32,15 @@ export function Nav() {
 
       <div className="hidden lg:flex items-center gap-8">
         {NAV_LINKS.map((l) => (
-          <button
+          <a
             key={l.label}
-            onClick={() => handleNav(l.href)}
-            className="bg-transparent border-none cursor-pointer text-[rgba(232,238,255,.65)] text-sm font-medium tracking-wide hover:text-cyan transition-colors"
+            href={l.href}
+            {...externalLinkProps(l.external)}
+            onClick={l.external ? undefined : (e) => goToSection(e, l.href)}
+            className="text-[rgba(232,238,255,.65)] text-sm font-medium tracking-wide hover:text-cyan transition-colors"
           >
             {l.label}
-          </button>
+          </a>
         ))}
         <button
           onClick={() => window.open(ACADEMY_URL, "_blank", "noopener,noreferrer")}
@@ -55,7 +50,7 @@ export function Nav() {
         </button>
       </div>
 
-      <MobileMenu open={menuOpen} onOpenChange={setMenuOpen} onNavigate={handleNav} />
+      <MobileMenu open={menuOpen} onOpenChange={setMenuOpen} />
     </nav>
   );
 }
